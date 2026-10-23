@@ -98,8 +98,8 @@ $ ./manoj --info
 | [Html-Table](https://github.com/iammanojbhatta/Html-Table) | HTML tables practice — rowspan/colspan examples |
 | [Nepali-Flag](https://github.com/iammanojbhatta/Nepali-Flag) | Nepal's flag as a web page 🇳🇵 |
 | [lovecalculator](https://github.com/iammanojbhatta/lovecalculator) | Love Calculator — just for fun |
-
-<sub>Two more projects (portfolio-website-practice, Gemini-Ai) join as soon as GitHub's repo-creation cooldown allows.</sub>
+| [portfolio-website-practice](https://github.com/iammanojbhatta/portfolio-website-practice) | Portfolio website practice build |
+| [Gemini-Ai](https://github.com/iammanojbhatta/Gemini-Ai) | Gemini AI experiment script |
 
 ## `>_ daily_life_toolkit` — 101 free tools, runs in your browser
 
