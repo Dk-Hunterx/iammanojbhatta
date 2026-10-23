@@ -73,7 +73,9 @@ $ ./manoj --info
 
 </div>
 
-## `>_ daily_tools` — free, runs in your browser
+## `>_ daily_life_toolkit` — 101 free tools, runs in your browser
+
+**👉 Open the full toolkit: [iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/)** — money, study, health, dates, text, image, document and fun tools. No sign-up, nothing uploaded. Popular ones:
 
 | Tool | What it does | Use it |
 |---|---|---|
