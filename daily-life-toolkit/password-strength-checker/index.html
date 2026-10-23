@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Password Strength Checker · Daily Life Toolkit</title><meta name="description" content="Test how strong a password is — length, variety and entropy. Checked only on your device."><style>:root{--pri:#2A3490;--pri2:#2563EB;--ink:#1C2333;--mut:#6B7280;--line:#E5E7F0;--bg:#F6F7FB;--card:#fff;--ok:#12805C;--bad:#C0392B}
+*{box-sizing:border-box;margin:0}body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+header{text-align:center;margin-bottom:22px}header .eyebrow{color:var(--pri2);font-weight:700;letter-spacing:.14em;font-size:.72rem;text-transform:uppercase}
+h1{font-size:1.9rem;margin:6px 0 4px}header p{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(29,36,102,.06);margin-bottom:18px}
+label{font-weight:600;font-size:.88rem;display:block;margin:10px 0 5px}
+input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.btn{display:inline-block;background:linear-gradient(120deg,var(--pri),var(--pri2));color:#fff;border:0;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;font:inherit}
+.btn.ghost{background:#EEF1FD;color:var(--pri);border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:560px){.row{grid-template-columns:1fr}}
+footer{text-align:center;color:var(--mut);font-size:.85rem;margin-top:8px}footer a{color:var(--pri2);text-decoration:none;font-weight:600}
+.stat{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)}.stat b{color:var(--pri)}
+.out{font-size:1.12rem}.big{font-size:2rem;font-weight:800;color:var(--pri);text-align:center}
+.drop{border:2px dashed var(--pri2);border-radius:14px;padding:26px;text-align:center;color:var(--mut);cursor:pointer;background:#F2F5FF}
+pre{background:#0D1117;color:#C9D1D9;padding:14px;border-radius:10px;overflow:auto;font-size:.86rem}</style></head><body><div style="background:#1D2466;color:#fff;padding:9px 16px;font-family:sans-serif;font-size:.9rem"><a href="../index.html" style="color:#9DB8FF;text-decoration:none;font-weight:700">← All Tools</a> <span style="opacity:.75">· Daily Life Toolkit by Manoj Bhatta</span></div><div class="wrap">
+<header><div class="eyebrow">Safety & Security</div><h1>🛡️ Password Strength Checker</h1><p>Test how strong a password is — length, variety and entropy. Checked only on your device.</p></header>
+<div class="card"><label>Password to test</label><input id="pw" type="text" placeholder="Type a password…" oninput="go()">
+<div style="height:12px;background:#EEF1FD;border-radius:99px;margin-top:14px;overflow:hidden"><div id="bar" style="height:100%;width:0;background:var(--bad);transition:width .3s"></div></div>
+<div class="stat"><span>Verdict</span><b id="v">–</b></div><div class="stat"><span>Entropy</span><b id="e">–</b></div><div class="stat"><span>Time to crack (10 billion guesses/sec)</span><b id="t">–</b></div>
+<div id="tips" style="color:var(--mut);font-size:.92rem;margin-top:10px"></div></div>
+<div class="card"><p style="color:var(--mut);font-size:.93rem">Nothing you type is sent or saved — the check runs in your browser. For real accounts, use the <a href="../password-generator/index.html">Password Generator</a> plus a password manager.</p></div>
+<footer>Built by <a href="https://github.com/iammanojbhatta">Manoj Bhatta</a> · Free tool — runs 100% in your browser, nothing is uploaded.</footer>
+</div><script>const $=id=>document.getElementById(id);
+function go(){const p=$('pw').value;let pool=0;if(/[a-z]/.test(p))pool+=26;if(/[A-Z]/.test(p))pool+=26;if(/\d/.test(p))pool+=10;if(/[^a-zA-Z0-9]/.test(p))pool+=32;
+const ent=p.length&&pool?Math.round(p.length*Math.log2(pool)):0;$('e').textContent=ent+' bits';
+$('bar').style.width=Math.min(100,ent/1.4)+'%';$('bar').style.background=ent<40?'var(--bad)':ent<70?'#E8A33D':'var(--ok)';
+$('v').textContent=!p.length?'–':ent<40?'Weak 😟':ent<70?'Okay 😐':ent<100?'Strong 💪':'Excellent 🔐';
+let sec=ent?Math.pow(2,ent)/1e10:0;const U=[['seconds',1],['minutes',60],['hours',3600],['days',86400],['years',31557600],['million years',31557600e6],['billion years',31557600e9]];
+let ts='instant';for(const [n,u] of U){if(sec>=u)ts=(sec/u>=1000?Math.round(sec/u).toLocaleString('en-IN'):Math.round(sec/u*10)/10)+' '+n}$('t').textContent=p.length?ts:'–';
+let tips=[];if(p.length<12)tips.push('Use at least 12–16 characters.');if(!/[A-Z]/.test(p))tips.push('Add UPPERCASE letters.');if(!/\d/.test(p))tips.push('Add numbers.');if(!/[^a-zA-Z0-9]/.test(p))tips.push('Add symbols like ! @ # $.');if(/password|1234|qwerty|admin/i.test(p))tips.push('Avoid common words and patterns.');
+$('tips').innerHTML=tips.length?('<b>Improve it:</b><br>• '+tips.join('<br>• ')):'<span style="color:var(--ok)"><b>Great password hygiene!</b></span>'}go();</script></body></html>
