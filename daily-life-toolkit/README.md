@@ -1,6 +1,6 @@
 # Daily Life Toolkit
 
-**101+ free tools for everyday life** — money, study, health, dates, photos, documents, text and fun. No sign-up, no uploads: everything runs in your browser, on your own device.
+**106+ free tools for everyday life** — money, study, health, dates, photos, documents, text and fun. No sign-up, no uploads: everything runs in your browser, on your own device.
 
 **Use it online:** https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/
 
@@ -24,6 +24,9 @@
 | HTML Entity Encoder | Escape <, >, & and quotes for safe HTML — or unescape them. |
 | Random String Generator | Random codes, tokens and IDs of any length. |
 | Screen Size Calculator | TV/monitor width and height from diagonal size and aspect ratio. |
+| WiFi QR Code Generator | Make a QR code guests can scan to join your WiFi — no spelling out passwords. |
+| Image to PDF | Combine photos/scans into one PDF — for forms, homework and documents. |
+| PDF Merger | Merge several PDFs into one file — in your chosen order. |
 | PDF to Word | Turn a PDF into an editable Word document — free, in your browser, no uploads. |
 | Word to PDF | Turn a Word (.docx) document into a clean PDF — free, in your browser, no uploads. |
 | Dice Roller | Roll one or more dice — for games and decisions. |
@@ -85,6 +88,7 @@
 | SIP / Monthly Investment Calculator | Future value of saving a fixed amount every month. |
 | Currency Converter | Convert NPR to USD, INR, EUR, GBP, AED and more (indicative rates). |
 | Room Rent Splitter | Split rent fairly by room size or equally. |
+| Invoice Generator | Create a clean invoice for clients — add items, VAT, and download/print it. |
 | Daily Expense Tracker | Track income and expenses in rupees — simple, private, on your phone or computer. |
 | Password Strength Checker | Test how strong a password is — length, variety and entropy. Checked only on your device. |
 | Password Generator | Strong, random passwords made on your own device — nothing is sent anywhere. |
@@ -95,6 +99,7 @@
 | Pomodoro Study Timer | Focus in 25-minute rounds with breaks — the classic study technique. |
 | Typing Speed Test | Type the sentence and measure your words per minute (WPM). |
 | Flashcard Maker | Make question–answer cards and flip through them to study. |
+| Simple Resume Builder | Fill the form — get a clean, printable one-page resume. Perfect for students. |
 | NEB GPA Calculator | Class 11/12 NEB marks → grade and GPA, with the official grade scale. |
 | Word & Character Counter | Count words, characters, sentences, paragraphs and reading time instantly. |
 | Case Converter | UPPERCASE, lowercase, Title Case, Sentence case and more. |

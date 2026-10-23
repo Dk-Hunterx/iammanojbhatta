@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Invoice Generator · Daily Life Toolkit</title><meta name="description" content="Create a clean invoice for clients — add items, VAT, and download/print it."><style>:root{--pri:#2A3490;--pri2:#2563EB;--ink:#1C2333;--mut:#6B7280;--line:#E5E7F0;--bg:#F6F7FB;--card:#fff;--ok:#12805C;--bad:#C0392B}
+*{box-sizing:border-box;margin:0}body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+header{text-align:center;margin-bottom:22px}header .eyebrow{color:var(--pri2);font-weight:700;letter-spacing:.14em;font-size:.72rem;text-transform:uppercase}
+h1{font-size:1.9rem;margin:6px 0 4px}header p{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(29,36,102,.06);margin-bottom:18px}
+label{font-weight:600;font-size:.88rem;display:block;margin:10px 0 5px}
+input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.btn{display:inline-block;background:linear-gradient(120deg,var(--pri),var(--pri2));color:#fff;border:0;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;font:inherit}
+.btn.ghost{background:#EEF1FD;color:var(--pri);border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:560px){.row{grid-template-columns:1fr}}
+footer{text-align:center;color:var(--mut);font-size:.85rem;margin-top:8px}footer a{color:var(--pri2);text-decoration:none;font-weight:600}
+.stat{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)}.stat b{color:var(--pri)}
+.out{font-size:1.12rem}.big{font-size:2rem;font-weight:800;color:var(--pri);text-align:center}
+.drop{border:2px dashed var(--pri2);border-radius:14px;padding:26px;text-align:center;color:var(--mut);cursor:pointer;background:#F2F5FF}
+pre{background:#0D1117;color:#C9D1D9;padding:14px;border-radius:10px;overflow:auto;font-size:.86rem}</style></head><body><div style="background:#1D2466;color:#fff;padding:9px 16px;font-family:sans-serif;font-size:.9rem"><a href="../index.html" style="color:#9DB8FF;text-decoration:none;font-weight:700">← All Tools</a> <span style="opacity:.75">· Daily Life Toolkit by Manoj Bhatta</span></div><div class="wrap">
+<header><div class="eyebrow">Money & Finance</div><h1>🧾 Invoice Generator</h1><p>Create a clean invoice for clients — add items, VAT, and download/print it.</p></header>
+<div class="card"><div class="row"><div><label>Your / business name</label><input id="bn" type="text" value="Manoj Bhatta — Web Services"></div>
+<div><label>Client name</label><input id="cn" type="text" placeholder="Client name"></div></div>
+<div class="row"><div><label>Invoice no.</label><input id="no" type="text" value="INV-001"></div><div><label>Date</label><input id="dt" type="date"></div></div>
+<label>Items — one per line: description | qty | rate</label>
+<textarea id="items" rows="5">Website design & development | 1 | 30000
+Domain + hosting (1 year) | 1 | 5000</textarea>
+<div class="row"><div><label>VAT % (Nepal 13, or 0)</label><input id="vat" type="number" value="0"></div>
+<div><label>Discount (रू)</label><input id="disc" type="number" value="0"></div></div>
+<p style="margin-top:14px"><button class="btn" onclick="gen()">Generate invoice</button></p></div>
+<div class="card" id="inv" style="display:none"></div>
+<p style="text-align:center"><button class="btn ghost" onclick="window.print()">🖨️ Print / Save as PDF</button></p>
+<style>@media print{body *{visibility:hidden}#inv,#inv *{visibility:visible}#inv{position:absolute;left:0;top:0;width:100%}}</style>
+<footer>Built by <a href="https://github.com/iammanojbhatta">Manoj Bhatta</a> · Free tool — runs 100% in your browser, nothing is uploaded.</footer>
+</div><script>const $=id=>document.getElementById(id);$('dt').value=new Date().toISOString().slice(0,10);
+function gen(){const lines=$('items').value.split('\n').map(l=>l.split('|').map(s=>s.trim())).filter(p=>p.length>=3);
+let sub=0;const rows=lines.map(p=>{const q=parseFloat(p[1])||0,r=parseFloat(p[2])||0,a=q*r;sub+=a;return '<tr><td style="padding:8px;border-bottom:1px solid #ddd">'+p[0]+'</td><td style="padding:8px;border-bottom:1px solid #ddd;text-align:right">'+q+'</td><td style="padding:8px;border-bottom:1px solid #ddd;text-align:right">रू '+r.toLocaleString('en-IN')+'</td><td style="padding:8px;border-bottom:1px solid #ddd;text-align:right">रू '+a.toLocaleString('en-IN')+'</td></tr>'}).join('');
+const disc=parseFloat($('disc').value)||0,vat=(parseFloat($('vat').value)||0)/100*(sub-disc),tot=sub-disc+vat;
+$('inv').innerHTML='<h2 style="color:#2A3490">INVOICE</h2><p><b>'+($('bn').value||'')+'</b><br>Invoice no: '+$('no').value+' · Date: '+$('dt').value+'<br>Billed to: <b>'+($('cn').value||'—')+'</b></p><table style="width:100%;border-collapse:collapse;margin-top:12px"><tr><th style="text-align:left;padding:8px;background:#EEF1FD">Description</th><th style="padding:8px;background:#EEF1FD;text-align:right">Qty</th><th style="padding:8px;background:#EEF1FD;text-align:right">Rate</th><th style="padding:8px;background:#EEF1FD;text-align:right">Amount</th></tr>'+rows+'</table>'
++'<div style="text-align:right;margin-top:12px;line-height:1.9">Subtotal: रू '+sub.toLocaleString('en-IN')+'<br>'+(disc?'Discount: − रू '+disc.toLocaleString('en-IN')+'<br>':'')+(vat?'VAT: रू '+vat.toLocaleString('en-IN')+'<br>':'')+'<b style="font-size:1.15rem">Total: रू '+tot.toLocaleString('en-IN')+'</b></div>'
++'<p style="color:#666;margin-top:16px;font-size:.88rem">Thank you for your business!</p>';
+$('inv').style.display='block';$('inv').scrollIntoView({behavior:'smooth'})}</script></body></html>
