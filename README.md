@@ -77,15 +77,15 @@ $ ./manoj --info
 
 | Tool | What it does | Use it |
 |---|---|---|
-| Daily Expense Tracker | Income/expense in रू, monthly summary | [Open](https://iammanojbhatta.github.io/daily-expense-tracker/) |
-| NEB GPA Calculator | Class 11/12 marks → grade & GPA | [Open](https://iammanojbhatta.github.io/neb-gpa-calculator/) |
-| Password Generator | Strong random passwords, on-device | [Open](https://iammanojbhatta.github.io/password-generator/) |
-| Daily To-Do Planner | Tasks, priorities, progress | [Open](https://iammanojbhatta.github.io/daily-todo-planner/) |
-| Nepali Date Converter | BS ↔ AD dates, both ways | [Open](https://iammanojbhatta.github.io/nepali-date-converter/) |
-| Image Compressor | Shrink photos for forms & web | [Open](https://iammanojbhatta.github.io/image-compressor/) |
-| File Extension Changer | PNG ↔ JPG ↔ WebP + rename tool | [Open](https://iammanojbhatta.github.io/file-extension-changer/) |
-| PDF to Word | PDF text → editable Word file | [Open](https://iammanojbhatta.github.io/pdf-to-word/) |
-| Word to PDF | .docx → clean A4 PDF | [Open](https://iammanojbhatta.github.io/word-to-pdf/) |
+| Daily Expense Tracker | Income/expense in रू, monthly summary | [Open](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/daily-expense-tracker/index.html) |
+| NEB GPA Calculator | Class 11/12 marks → grade & GPA | [Open](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/neb-gpa-calculator/index.html) |
+| Password Generator | Strong random passwords, on-device | [Open](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/password-generator/index.html) |
+| Daily To-Do Planner | Tasks, priorities, progress | [Open](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/daily-todo-planner/index.html) |
+| Nepali Date Converter | BS ↔ AD dates, both ways | [Open](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/nepali-date-converter/index.html) |
+| Image Compressor | Shrink photos for forms & web | [Open](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/image-compressor/index.html) |
+| File Extension Changer | PNG ↔ JPG ↔ WebP + rename tool | [Open](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/file-extension-changer/index.html) |
+| PDF to Word | PDF text → editable Word file | [Open](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/pdf-to-word/index.html) |
+| Word to PDF | .docx → clean A4 PDF | [Open](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/word-to-pdf/index.html) |
 
 ## `>_ work_with_me`
 
