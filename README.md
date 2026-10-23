@@ -82,6 +82,10 @@ $ ./manoj --info
 | Password Generator | Strong random passwords, on-device | [Open](https://iammanojbhatta.github.io/password-generator/) |
 | Daily To-Do Planner | Tasks, priorities, progress | [Open](https://iammanojbhatta.github.io/daily-todo-planner/) |
 | Nepali Date Converter | BS ↔ AD dates, both ways | [Open](https://iammanojbhatta.github.io/nepali-date-converter/) |
+| Image Compressor | Shrink photos for forms & web | [Open](https://iammanojbhatta.github.io/image-compressor/) |
+| File Extension Changer | PNG ↔ JPG ↔ WebP + rename tool | [Open](https://iammanojbhatta.github.io/file-extension-changer/) |
+| PDF to Word | PDF text → editable Word file | [Open](https://iammanojbhatta.github.io/pdf-to-word/) |
+| Word to PDF | .docx → clean A4 PDF | [Open](https://iammanojbhatta.github.io/word-to-pdf/) |
 
 ## `>_ work_with_me`
 
