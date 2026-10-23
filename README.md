@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1000&color=00FF41&background=0D1117&center=true&vCenter=true&width=640&lines=Full-Stack+Web+Developer;WordPress+Developer;OSINT+%26+Cybersecurity+Explorer;BICTE+Student+%7C+Class+12+Teacher;Building+from+Kailali%2C+Nepal" alt="Typing SVG"></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1000&color=00FF41&background=0D1117&center=true&vCenter=true&width=640&lines=Full-Stack+Web+Developer;WordPress+Developer;OSINT+%26+Cybersecurity+Explorer;BICTE+Student;Building+from+Kailali%2C+Nepal" alt="Typing SVG"></a>
 
 <br>
 
@@ -19,7 +19,7 @@ $ ./manoj --info
 > Role       : Full-Stack Web Developer & WordPress Developer
 > Base       : Ghodaghodi, Kailali, Nepal
 > Study      : BICTE, Tribhuvan University (2024 - Present)
-> Also       : Class 12 Teacher | Creator of OSINTBRO (YouTube)
+> Also       : Creator of OSINTBRO (YouTube)
 > Mission    : Clean, secure, useful websites + OSINT awareness for Nepal
 > Status     : [ OPEN FOR FREELANCE WORK ]
 ```
