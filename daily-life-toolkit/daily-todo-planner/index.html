@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily To-Do Planner · Manoj Bhatta</title><meta name="description" content="A simple daily task list with priorities and due dates — saved on your device."><style>:root{--pri:#2A3490;--pri2:#2563EB;--ink:#1C2333;--mut:#6B7280;--line:#E5E7F0;--bg:#F6F7FB;--card:#fff;--ok:#12805C;--bad:#C0392B}
+*{box-sizing:border-box;margin:0}body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+header{text-align:center;margin-bottom:22px}header .eyebrow{color:var(--pri2);font-weight:700;letter-spacing:.14em;font-size:.72rem;text-transform:uppercase}
+h1{font-size:1.9rem;margin:6px 0 4px}header p{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(29,36,102,.06);margin-bottom:18px}
+label{font-weight:600;font-size:.88rem;display:block;margin:10px 0 5px}
+input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.btn{display:inline-block;background:linear-gradient(120deg,var(--pri),var(--pri2));color:#fff;border:0;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;font:inherit}
+.btn.ghost{background:#EEF1FD;color:var(--pri);border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:560px){.row{grid-template-columns:1fr}}
+footer{text-align:center;color:var(--mut);font-size:.85rem;margin-top:8px}footer a{color:var(--pri2);text-decoration:none;font-weight:600}</style></head><body><div style="background:#1D2466;color:#fff;padding:9px 16px;font-family:sans-serif;font-size:.9rem"><a href="../index.html" style="color:#9DB8FF;text-decoration:none;font-weight:700">← All Tools</a> <span style="opacity:.75">· Daily Life Toolkit by Manoj Bhatta</span></div><div class="wrap">
+<header><div class="eyebrow">Daily Life Tool</div><h1>Daily To-Do Planner</h1><p>A simple daily task list with priorities and due dates — saved on your device.</p></header>
+<div class="card"><div class="row"><div><label>Task</label><input id="task" type="text" placeholder="e.g. Prepare Class 12 notes"></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div><label>Priority</label><select id="pri"><option>Normal</option><option>High</option><option>Low</option></select></div><div><label>Due date</label><input id="due" type="date"></div></div></div>
+<p style="margin-top:14px"><button class="btn" onclick="add()">Add Task</button></p></div>
+<div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><h3>Today & upcoming</h3><span id="prog" style="color:var(--mut);font-size:.9rem"></span></div>
+<div style="height:10px;background:#EEF1FD;border-radius:99px;margin:10px 0 6px;overflow:hidden"><div id="bar" style="height:100%;width:0;background:var(--ok);transition:width .3s"></div></div>
+<div id="list"></div>
+<p style="margin-top:12px"><button class="btn ghost" onclick="clearDone()">Clear finished tasks</button></p></div>
+<footer>Built by <a href="https://github.com/iammanojbhatta">Manoj Bhatta</a> · Free tool, works offline, your data stays in your browser.</footer>
+</div><script>let T=JSON.parse(localStorage.getItem('todo')||'[]');const $=id=>document.getElementById(id);
+function save(){localStorage.setItem('todo',JSON.stringify(T));render()}
+function add(){const v=$('task').value.trim();if(!v)return alert('Write a task first');T.push({t:v,p:$('pri').value,d:$('due').value,done:false});$('task').value='';save()}
+function tog(i){T[i].done=!T[i].done;save()} function del(i){T.splice(i,1);save()}
+function clearDone(){T=T.filter(x=>!x.done);save()}
+const PC={High:'var(--bad)',Normal:'var(--pri2)',Low:'var(--mut)'};
+function render(){const done=T.filter(x=>x.done).length;$('prog').textContent=T.length?done+' of '+T.length+' done':'';$('bar').style.width=T.length?(done/T.length*100)+'%':'0';
+$('list').innerHTML=T.length?T.map((x,i)=>`<div style="display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line)"><input type="checkbox" ${x.done?'checked':''} onchange="tog(${i})" style="width:20px;height:20px;margin-top:2px"><div style="flex:1;${x.done?'text-decoration:line-through;color:var(--mut)':''}"><strong>${x.t}</strong><br><span style="font-size:.83rem;color:${PC[x.p]};font-weight:700">${x.p} priority</span>${x.d?`<span style="font-size:.83rem;color:var(--mut)"> · due ${x.d}</span>`:''}</div><button onclick="del(${i})" style="border:0;background:none;color:var(--bad);cursor:pointer;font-weight:700">✕</button></div>`).join(''):'<p style="color:var(--mut)">No tasks. Add your first one above.</p>'}
+render();</script></body></html>

@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Password Generator · Manoj Bhatta</title><meta name="description" content="Strong, random passwords made on your own device — nothing is sent anywhere."><style>:root{--pri:#2A3490;--pri2:#2563EB;--ink:#1C2333;--mut:#6B7280;--line:#E5E7F0;--bg:#F6F7FB;--card:#fff;--ok:#12805C;--bad:#C0392B}
+*{box-sizing:border-box;margin:0}body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+header{text-align:center;margin-bottom:22px}header .eyebrow{color:var(--pri2);font-weight:700;letter-spacing:.14em;font-size:.72rem;text-transform:uppercase}
+h1{font-size:1.9rem;margin:6px 0 4px}header p{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(29,36,102,.06);margin-bottom:18px}
+label{font-weight:600;font-size:.88rem;display:block;margin:10px 0 5px}
+input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.btn{display:inline-block;background:linear-gradient(120deg,var(--pri),var(--pri2));color:#fff;border:0;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;font:inherit}
+.btn.ghost{background:#EEF1FD;color:var(--pri);border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:560px){.row{grid-template-columns:1fr}}
+footer{text-align:center;color:var(--mut);font-size:.85rem;margin-top:8px}footer a{color:var(--pri2);text-decoration:none;font-weight:600}</style></head><body><div style="background:#1D2466;color:#fff;padding:9px 16px;font-family:sans-serif;font-size:.9rem"><a href="../index.html" style="color:#9DB8FF;text-decoration:none;font-weight:700">← All Tools</a> <span style="opacity:.75">· Daily Life Toolkit by Manoj Bhatta</span></div><div class="wrap">
+<header><div class="eyebrow">Stay Safe Online</div><h1>Password Generator</h1><p>Strong, random passwords made on your own device — nothing is sent anywhere.</p></header>
+<div class="card"><label>Your password</label>
+<div style="display:flex;gap:10px"><input id="pw" type="text" readonly style="font-family:Consolas,monospace;font-size:1.05rem"><button class="btn" onclick="copyPw()">Copy</button></div>
+<div style="height:10px;background:#EEF1FD;border-radius:99px;margin-top:14px;overflow:hidden"><div id="bar" style="height:100%;width:0;background:var(--pri2);border-radius:99px;transition:width .3s"></div></div>
+<p id="strength" style="color:var(--mut);font-size:.88rem;margin-top:6px"></p>
+<label>Length: <span id="lv">16</span></label><input id="len" type="range" min="8" max="64" value="16" oninput="document.getElementById('lv').textContent=this.value;gen()">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px">
+<label style="font-weight:500"><input type="checkbox" id="up" checked style="width:auto"> Uppercase A–Z</label>
+<label style="font-weight:500"><input type="checkbox" id="low" checked style="width:auto"> Lowercase a–z</label>
+<label style="font-weight:500"><input type="checkbox" id="num" checked style="width:auto"> Numbers 0–9</label>
+<label style="font-weight:500"><input type="checkbox" id="sym" checked style="width:auto"> Symbols !@#$</label></div>
+<p style="margin-top:16px"><button class="btn" onclick="gen()">Generate New Password</button></p></div>
+<div class="card"><h3 style="margin-bottom:6px">Why this is safe</h3><p style="color:var(--mut);font-size:.93rem">Passwords are created with your browser's cryptographic random generator (the same strength banks use), right on your device. Nothing is sent anywhere or saved. Use a different password for every account, and keep them in a password manager.</p></div>
+<footer>Built by <a href="https://github.com/iammanojbhatta">Manoj Bhatta</a> · Free tool, works offline, your data stays in your browser.</footer>
+</div><script>const $=id=>document.getElementById(id);
+function gen(){let set='';if($('up').checked)set+='ABCDEFGHJKLMNPQRSTUVWXYZ';if($('low').checked)set+='abcdefghijkmnpqrstuvwxyz';if($('num').checked)set+='23456789';if($('sym').checked)set+='!@#$%^&*()-_=+';
+if(!set)return alert('Tick at least one character type');const L=+$('len').value;const buf=new Uint32Array(L);crypto.getRandomValues(buf);let out='';for(let i=0;i<L;i++)out+=set[buf[i]%set.length];$('pw').value=out;
+const bits=Math.round(L*Math.log2(set.length));$('bar').style.width=Math.min(100,bits/1.6)+'%';$('bar').style.background=bits<50?'var(--bad)':bits<80?'#E8A33D':'var(--ok)';
+$('strength').textContent='Strength: '+(bits<50?'Weak':bits<80?'Good':'Excellent')+' · about '+bits+' bits of entropy'}
+function copyPw(){$('pw').select();navigator.clipboard.writeText($('pw').value);alert('Copied!')}
+gen();</script></body></html>

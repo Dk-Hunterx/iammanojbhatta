@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Expense Tracker · Manoj Bhatta</title><meta name="description" content="Track income and expenses in rupees — simple, private, on your phone or computer."><style>:root{--pri:#2A3490;--pri2:#2563EB;--ink:#1C2333;--mut:#6B7280;--line:#E5E7F0;--bg:#F6F7FB;--card:#fff;--ok:#12805C;--bad:#C0392B}
+*{box-sizing:border-box;margin:0}body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+header{text-align:center;margin-bottom:22px}header .eyebrow{color:var(--pri2);font-weight:700;letter-spacing:.14em;font-size:.72rem;text-transform:uppercase}
+h1{font-size:1.9rem;margin:6px 0 4px}header p{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(29,36,102,.06);margin-bottom:18px}
+label{font-weight:600;font-size:.88rem;display:block;margin:10px 0 5px}
+input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.btn{display:inline-block;background:linear-gradient(120deg,var(--pri),var(--pri2));color:#fff;border:0;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;font:inherit}
+.btn.ghost{background:#EEF1FD;color:var(--pri);border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:560px){.row{grid-template-columns:1fr}}
+footer{text-align:center;color:var(--mut);font-size:.85rem;margin-top:8px}footer a{color:var(--pri2);text-decoration:none;font-weight:600}</style></head><body><div style="background:#1D2466;color:#fff;padding:9px 16px;font-family:sans-serif;font-size:.9rem"><a href="../index.html" style="color:#9DB8FF;text-decoration:none;font-weight:700">← All Tools</a> <span style="opacity:.75">· Daily Life Toolkit by Manoj Bhatta</span></div><div class="wrap">
+<header><div class="eyebrow">Daily Life Tool</div><h1>Daily Expense Tracker</h1><p>Track income and expenses in rupees — simple, private, on your phone or computer.</p></header>
+<div class="card"><div class="row">
+<div><label>Type</label><select id="type"><option value="expense">Expense</option><option value="income">Income</option></select></div>
+<div><label>Amount (रू)</label><input id="amt" type="number" min="1" placeholder="e.g. 500"></div></div>
+<div class="row"><div><label>Category</label><select id="cat"><option>Food</option><option>Transport</option><option>Study</option><option>Mobile/Internet</option><option>Rent</option><option>Health</option><option>Salary</option><option>Business</option><option>Other</option></select></div>
+<div><label>Date</label><input id="date" type="date"></div></div>
+<label>Note (optional)</label><input id="note" type="text" placeholder="e.g. Lunch with friends">
+<p style="margin-top:14px"><button class="btn" onclick="add()">Add Entry</button></p></div>
+<div class="card"><div class="row" style="text-align:center">
+<div><div style="color:var(--mut);font-size:.82rem">BALANCE</div><div id="bal" style="font-size:1.5rem;font-weight:800">रू 0</div></div>
+<div><div style="color:var(--mut);font-size:.82rem">THIS MONTH</div><div style="font-size:1.05rem"><span id="min" style="color:var(--ok);font-weight:700">+रू 0</span> · <span id="mout" style="color:var(--bad);font-weight:700">−रू 0</span></div></div></div></div>
+<div class="card"><h3 style="margin-bottom:10px">Entries</h3><div id="list"></div>
+<p style="margin-top:12px"><button class="btn ghost" onclick="clearAll()">Clear all data</button></p></div>
+<footer>Built by <a href="https://github.com/iammanojbhatta">Manoj Bhatta</a> · Free tool, works offline, your data stays in your browser.</footer>
+</div><script>let D=JSON.parse(localStorage.getItem('exp')||'[]');const $=id=>document.getElementById(id);$('date').value=new Date().toISOString().slice(0,10);
+const fmt=n=>'रू '+Math.abs(n).toLocaleString('en-IN');
+function save(){localStorage.setItem('exp',JSON.stringify(D));render()}
+function add(){const a=parseFloat($('amt').value);if(!a||a<=0)return alert('Enter a valid amount');D.unshift({t:$('type').value,a,c:$('cat').value,d:$('date').value,n:$('note').value});$('amt').value='';$('note').value='';save()}
+function del(i){D.splice(i,1);save()}
+function clearAll(){if(confirm('Delete all entries?')){D=[];save()}}
+function render(){const now=new Date().toISOString().slice(0,7);let bal=0,mi=0,mo=0;
+$('list').innerHTML=D.length?D.map((e,i)=>{bal+=e.t==='income'?e.a:-e.a;if(e.d.startsWith(now)){if(e.t==='income')mi+=e.a;else mo+=e.a}
+return `<div style="display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)"><div><strong style="color:${e.t==='income'?'var(--ok)':'var(--bad)'}">${e.t==='income'?'+':'−'} ${fmt(e.a)}</strong> <span style="color:var(--mut)">${e.c}${e.n?' · '+e.n:''}</span></div><div style="white-space:nowrap"><span style="color:var(--mut);font-size:.85rem">${e.d}</span> <button onclick="del(${i})" style="border:0;background:none;color:var(--bad);cursor:pointer;font-weight:700">✕</button></div></div>`}).join(''):'<p style="color:var(--mut)">No entries yet. Add your first one above.</p>';
+$('bal').textContent=(bal<0?'− ':'')+fmt(bal);$('min').textContent='+'+fmt(mi);$('mout').textContent='−'+fmt(mo)}
+render();</script></body></html>

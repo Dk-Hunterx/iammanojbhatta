@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Life Toolkit · Manoj Bhatta</title><meta name="description" content="Nine free daily-life tools in one place: expense tracker, NEB GPA calculator, Nepali date converter, image compressor, PDF/Word converters, password generator and more. No sign-up, works offline, your files never leave your device.">
+<style>:root{--pri:#2A3490;--pri2:#2563EB;--ink:#1C2333;--mut:#6B7280;--line:#E5E7F0;--bg:#F6F7FB;--card:#fff;--ok:#12805C;--bad:#C0392B}
+*{box-sizing:border-box;margin:0}body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+header{text-align:center;margin-bottom:22px}header .eyebrow{color:var(--pri2);font-weight:700;letter-spacing:.14em;font-size:.72rem;text-transform:uppercase}
+h1{font-size:1.9rem;margin:6px 0 4px}header p{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(29,36,102,.06);margin-bottom:18px}
+label{font-weight:600;font-size:.88rem;display:block;margin:10px 0 5px}
+input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.btn{display:inline-block;background:linear-gradient(120deg,var(--pri),var(--pri2));color:#fff;border:0;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;font:inherit}
+.btn.ghost{background:#EEF1FD;color:var(--pri);border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:560px){.row{grid-template-columns:1fr}}
+footer{text-align:center;color:var(--mut);font-size:.85rem;margin-top:8px}footer a{color:var(--pri2);text-decoration:none;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:14px}
+.tool{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;text-decoration:none;color:var(--ink);box-shadow:0 8px 24px rgba(29,36,102,.06);transition:transform .15s,box-shadow .15s}
+.tool:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(29,36,102,.12)}
+.tool .ic{font-size:1.9rem}.tool h3{margin:8px 0 5px;font-size:1.06rem}.tool p{color:var(--mut);font-size:.9rem}.tool span{color:var(--pri2);font-weight:700;font-size:.88rem;display:inline-block;margin-top:9px}
+#q{margin-bottom:16px}</style></head><body><div class="wrap">
+<header><div class="eyebrow">Free · No sign-up · Private</div><h1>Daily Life Toolkit</h1><p>Nine small tools that make everyday work easier — money, study, dates, photos and documents. Everything runs in your browser; your files never leave your device.</p></header>
+<input id="q" type="text" placeholder="🔍 Search tools…" oninput="flt(this.value)">
+<div class="grid" id="grid">
+<a class="tool" href="daily-expense-tracker/index.html"><div class="ic">💰</div><h3>Daily Expense Tracker</h3><p>Income & expenses in rupees, with balance and monthly summary.</p><span>Open tool →</span></a>
+<a class="tool" href="neb-gpa-calculator/index.html"><div class="ic">🎓</div><h3>NEB GPA Calculator</h3><p>Class 11/12 marks → grade and GPA on the official NEB scale.</p><span>Open tool →</span></a>
+<a class="tool" href="nepali-date-converter/index.html"><div class="ic">📅</div><h3>Nepali Date Converter</h3><p>BS ↔ AD date conversion, both ways, with Nepali month names.</p><span>Open tool →</span></a>
+<a class="tool" href="image-compressor/index.html"><div class="ic">🗜️</div><h3>Image Compressor</h3><p>Shrink photos for forms and web — quality slider, live savings.</p><span>Open tool →</span></a>
+<a class="tool" href="file-extension-changer/index.html"><div class="ic">🔄</div><h3>File Extension Changer</h3><p>Real PNG ↔ JPG ↔ WebP conversion, plus a safe rename tool.</p><span>Open tool →</span></a>
+<a class="tool" href="pdf-to-word/index.html"><div class="ic">📄</div><h3>PDF to Word</h3><p>Extract a PDF's text into an editable Word document.</p><span>Open tool →</span></a>
+<a class="tool" href="word-to-pdf/index.html"><div class="ic">📝</div><h3>Word to PDF</h3><p>Turn a .docx document into a clean A4 PDF.</p><span>Open tool →</span></a>
+<a class="tool" href="password-generator/index.html"><div class="ic">🔐</div><h3>Password Generator</h3><p>Strong random passwords, generated on your device only.</p><span>Open tool →</span></a>
+<a class="tool" href="daily-todo-planner/index.html"><div class="ic">✅</div><h3>Daily To-Do Planner</h3><p>Tasks with priorities, due dates and a progress bar.</p><span>Open tool →</span></a>
+</div>
+<p id="none" style="display:none;color:var(--mut);text-align:center;margin-top:14px">No tool matches that search.</p>
+<footer>Built by <a href="https://github.com/iammanojbhatta">Manoj Bhatta</a> · Ghodaghodi, Kailali, Nepal</footer>
+</div><script>
+function flt(v){v=v.toLowerCase();let any=false;document.querySelectorAll('.tool').forEach(t=>{const s=t.textContent.toLowerCase().includes(v);t.style.display=s?'block':'none';if(s)any=true});document.getElementById('none').style.display=any?'none':'block'}
+</script></body></html>
