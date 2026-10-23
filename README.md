@@ -88,7 +88,18 @@ $ ./manoj --info
 | [Basic-Computer-Course](https://github.com/iammanojbhatta/Basic-Computer-Course) | Basic computer course notes & material |
 | [Email-OSINT-Nepal](https://github.com/iammanojbhatta/Email-OSINT-Nepal) | Email OSINT awareness notes for Nepal |
 
-<sub>More restored projects (interactive Map of Nepal, Solar System, CV site, games & practice builds) are being added in small batches.</sub>
+| [Map-of-Nepal](https://github.com/iammanojbhatta/Map-of-Nepal) | Interactive map of Nepal — 7 provinces & districts (Leaflet) |
+| [Solar-System](https://github.com/iammanojbhatta/Solar-System) | Animated solar system in HTML/CSS/JS |
+| [cv](https://github.com/iammanojbhatta/cv) | Personal portfolio / vCard website |
+| [portfolio](https://github.com/iammanojbhatta/portfolio) | My early portfolio website — where the journey began |
+| [manojchatgpt](https://github.com/iammanojbhatta/manojchatgpt) | Manoj ChatGPT — chat page experiment |
+| [backgroundremover](https://github.com/iammanojbhatta/backgroundremover) | Python background remover tool |
+| [Heart](https://github.com/iammanojbhatta/Heart) | A heart drawn with Python Turtle |
+| [Html-Table](https://github.com/iammanojbhatta/Html-Table) | HTML tables practice — rowspan/colspan examples |
+| [Nepali-Flag](https://github.com/iammanojbhatta/Nepali-Flag) | Nepal's flag as a web page 🇳🇵 |
+| [lovecalculator](https://github.com/iammanojbhatta/lovecalculator) | Love Calculator — just for fun |
+
+<sub>Two more projects (portfolio-website-practice, Gemini-Ai) join as soon as GitHub's repo-creation cooldown allows.</sub>
 
 ## `>_ daily_life_toolkit` — 101 free tools, runs in your browser
 
