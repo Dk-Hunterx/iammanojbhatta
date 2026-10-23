@@ -73,6 +73,23 @@ $ ./manoj --info
 
 </div>
 
+## `>_ all_projects`
+
+| Project | What it is |
+|---|---|
+| [Daily Life Toolkit](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/) | **101 free tools** — money, study, health, dates, images, documents |
+| [Username-OSINT](https://github.com/iammanojbhatta/Username-OSINT) | Check a username across many sites (legal OSINT) |
+| [Domain-Osint-Master](https://github.com/iammanojbhatta/Domain-Osint-Master) | Domain investigation toolkit (legal OSINT) |
+| [LinuxDeviceInspector](https://github.com/iammanojbhatta/LinuxDeviceInspector) | Linux device & system information inspector |
+| [OSINT-Fundamentals](https://github.com/iammanojbhatta/OSINT-Fundamentals) | My OSINT learning notes & fundamentals course |
+| [AI-ML](https://github.com/iammanojbhatta/AI-ML) | Python fundamentals — clean commented examples for beginners |
+| [About-Me](https://github.com/iammanojbhatta/About-Me) | About me — profile README project |
+| [BICTE-1st-Semester](https://github.com/iammanojbhatta/BICTE-1st-Semester) | BICTE 1st semester study notes (IIT + C Programming PDFs) |
+| [Basic-Computer-Course](https://github.com/iammanojbhatta/Basic-Computer-Course) | Basic computer course notes & material |
+| [Email-OSINT-Nepal](https://github.com/iammanojbhatta/Email-OSINT-Nepal) | Email OSINT awareness notes for Nepal |
+
+<sub>More restored projects (interactive Map of Nepal, Solar System, CV site, games & practice builds) are being added in small batches.</sub>
+
 ## `>_ daily_life_toolkit` — 101 free tools, runs in your browser
 
 **👉 Open the full toolkit: [iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit](https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/)** — money, study, health, dates, text, image, document and fun tools. No sign-up, nothing uploaded. Popular ones:
