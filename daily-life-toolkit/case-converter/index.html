@@ -14,14 +14,14 @@ footer{text-align:center;color:var(--mut);font-size:.85rem;margin-top:8px}footer
 .stat{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)}.stat b{color:var(--pri)}
 .out{font-size:1.12rem}.big{font-size:2rem;font-weight:800;color:var(--pri);text-align:center}
 .drop{border:2px dashed var(--pri2);border-radius:14px;padding:26px;text-align:center;color:var(--mut);cursor:pointer;background:#F2F5FF}
-pre{background:#0D1117;color:#C9D1D9;padding:14px;border-radius:10px;overflow:auto;font-size:.86rem}</style></head><body><div style="background:#1D2466;color:#fff;padding:9px 16px;font-family:sans-serif;font-size:.9rem"><a href="../index.html" style="color:#9DB8FF;text-decoration:none;font-weight:700">← All Tools</a> <span style="opacity:.75">· Daily Life Toolkit by Manoj Bhatta</span></div><div class="wrap">
+pre{background:#0D1117;color:#C9D1D9;padding:14px;border-radius:10px;overflow:auto;font-size:.86rem}</style></head><body><div style="background:#1D2466;color:#fff;padding:9px 16px;font-family:sans-serif;font-size:.9rem"><a href="../index.html" style="color:#9DB8FF;text-decoration:none;font-weight:700">← All Tools</a> <span style="opacity:.75">· DK Hunter Daily Life Toolkit</span></div><div class="wrap">
 <header><div class="eyebrow">Text Tools</div><h1>🔤 Case Converter</h1><p>UPPERCASE, lowercase, Title Case, Sentence case and more.</p></header>
 <div class="card"><label>Your text</label><textarea id="tx" rows="8" placeholder="Type or paste your text here…"></textarea>
 <p id="cnt" style="color:var(--mut);font-size:.88rem;margin-top:6px"></p>
 <p style="margin-top:12px"><button class="btn" onclick="t0()">UPPERCASE</button> <button class="btn ghost" onclick="t1()">lowercase</button> <button class="btn ghost" onclick="t2()">Title Case</button> <button class="btn ghost" onclick="t3()">Sentence case</button> <button class="btn ghost" onclick="t4()">aLtErNaTiNg</button> </p>
 <label style="margin-top:12px">Result</label><textarea id="rs" rows="8" readonly></textarea>
 <p style="margin-top:10px"><button class="btn ghost" onclick="cp()">Copy result</button></p></div>
-<footer>Built by <a href="https://github.com/iammanojbhatta">Manoj Bhatta</a> · Free tool — runs 100% in your browser, nothing is uploaded.</footer>
+<footer>Built by <a href="https://github.com/Dk-Hunterx">DK Hunter</a> · Free tool — runs 100% in your browser, nothing is uploaded.</footer>
 </div><script>const $=id=>document.getElementById(id);
 function cnt(){const v=$('tx').value;$('cnt').textContent=v.length+' characters · '+(v.trim()?v.trim().split(/\s+/).length:0)+' words · '+(v?v.split('\n').length:0)+' lines'}
 $('tx').addEventListener('input',cnt);cnt();
