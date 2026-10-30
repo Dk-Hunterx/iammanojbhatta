@@ -1,8 +1,8 @@
-# Daily Life Toolkit
+# DK Hunter Daily Life Toolkit
 
 **106+ free tools for everyday life** — money, study, health, dates, photos, documents, text and fun. No sign-up, no uploads: everything runs in your browser, on your own device.
 
-**Use it online:** https://iammanojbhatta.github.io/iammanojbhatta/daily-life-toolkit/
+**Use it online:** https://dk-hunterx.github.io/iammanojbhatta/daily-life-toolkit/
 
 ## Tools
 | Tool | What it does |
@@ -114,4 +114,4 @@
 | Remove Extra Spaces | Clean up text: collapse multiple spaces, trim lines, remove blank lines. |
 | Text ↔ Binary | Convert text to binary code and back — fun for students. |
 
-Made by [Manoj Bhatta](https://github.com/iammanojbhatta) — free for everyone.
+Customized by [DK Hunter](https://github.com/Dk-Hunterx) — free for everyone.
