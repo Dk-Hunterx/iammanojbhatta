@@ -60,6 +60,14 @@ A few projects and experiments from my GitHub:
 - Git workflows and project deployment
 - Linux command line and responsible security practices
 
+## `>_ daily_life_toolkit`
+
+**106+ free browser-based tools** for money, study, health, dates, images, documents, text and everyday tasks. No sign-up; your files and data stay on your device.
+
+👉 **[Open DK Hunter Daily Life Toolkit](https://dk-hunterx.github.io/iammanojbhatta/daily-life-toolkit/)**
+
+Includes Nepal-focused utilities such as the Nepali date converter, NEB GPA calculator, NPR expense tracker, Nepal VAT calculator and electricity bill estimator.
+
 ## `> connect`
 
 <div align="center">
