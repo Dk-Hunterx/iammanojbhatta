@@ -14,7 +14,7 @@
 
 ---
 
-## `> whoami`
+## > whoami
 
 Hi! I'm **DK Hunter**, a developer-in-progress from **Nepal**. I enjoy learning by building practical projects, experimenting with code, and exploring how technology works.
 
@@ -26,9 +26,7 @@ Hi! I'm **DK Hunter**, a developer-in-progress from **Nepal**. I enjoy learning 
 
 > My goal is to understand the fundamentals, write better code, and turn ideas into useful projects.
 
-## `> tech_stack --learning`
-
-<div align="center">
+## > tech_stack --learning
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -39,20 +37,17 @@ Hi! I'm **DK Hunter**, a developer-in-progress from **Nepal**. I enjoy learning 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Termux](https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=terminal&logoColor=white)
 
-</div>
-
-## `> projects`
-
-A few projects and experiments from my GitHub:
+## > projects
 
 | Project | Description |
 |---|---|
-| [DK FM](https://github.com/Dk-Hunterx/Dk_fm) | Music and audio platform project |
-| [DK FM (v2)](https://github.com/Dk-Hunterx/Dk_fm0) | Another DK FM development repository |
+| [DK FM](https://github.com/Dk-Hunterx/Dk_fm) | Audio stories and streaming platform |
+| [DK FM (component version)](https://github.com/Dk-Hunterx/Dk-fm) | Component-based audio app |
 | [DK Userbot X](https://github.com/Dk-Hunterx/Dk_userbotx) | Telegram userbot project |
-| [Explore all repositories](https://github.com/Dk-Hunterx?tab=repositories) | More experiments and projects |
+| [Daily Life Toolkit](https://dk-hunterx.github.io/iammanojbhatta/daily-life-toolkit/) | 100+ free browser-based utilities |
+| [Explore repositories](https://github.com/Dk-Hunterx?tab=repositories) | More projects and experiments |
 
-## `> currently_learning`
+## > currently_learning
 
 - Python fundamentals, functions, modules and file handling
 - HTML, CSS and JavaScript
@@ -60,28 +55,14 @@ A few projects and experiments from my GitHub:
 - Git workflows and project deployment
 - Linux command line and responsible security practices
 
-## `>_ daily_life_toolkit`
-
-**106+ free browser-based tools** for money, study, health, dates, images, documents, text and everyday tasks. No sign-up; your files and data stay on your device.
-
-👉 **[Open DK Hunter Daily Life Toolkit](https://dk-hunterx.github.io/iammanojbhatta/daily-life-toolkit/)**
-
-Includes Nepal-focused utilities such as the Nepali date converter, NEB GPA calculator, NPR expense tracker, Nepal VAT calculator and electricity bill estimator.
-
-## `> connect`
-
-<div align="center">
+## > connect
 
 [![GitHub](https://img.shields.io/badge/GitHub-Follow%20me-181717?style=for-the-badge&logo=github)](https://github.com/Dk-Hunterx)
 
 **Building. Learning. Improving. One commit at a time.**
 
-</div>
-
 ---
 
 <div align="center">
-
-<sub>Made with curiosity from Nepal 🇳🇵 · `echo "Keep learning."`</sub>
-
+<sub>Made by DK Hunter 🇳🇵 · `echo "Keep learning."`</sub>
 </div>
