@@ -14,14 +14,14 @@ footer{text-align:center;color:var(--mut);font-size:.85rem;margin-top:8px}footer
 .stat{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)}.stat b{color:var(--pri)}
 .out{font-size:1.12rem}.big{font-size:2rem;font-weight:800;color:var(--pri);text-align:center}
 .drop{border:2px dashed var(--pri2);border-radius:14px;padding:26px;text-align:center;color:var(--mut);cursor:pointer;background:#F2F5FF}
-pre{background:#0D1117;color:#C9D1D9;padding:14px;border-radius:10px;overflow:auto;font-size:.86rem}</style></head><body><div style="background:#1D2466;color:#fff;padding:9px 16px;font-family:sans-serif;font-size:.9rem"><a href="../index.html" style="color:#9DB8FF;text-decoration:none;font-weight:700">← All Tools</a> <span style="opacity:.75">· Daily Life Toolkit by Manoj Bhatta</span></div><div class="wrap">
+pre{background:#0D1117;color:#C9D1D9;padding:14px;border-radius:10px;overflow:auto;font-size:.86rem}</style></head><body><div style="background:#1D2466;color:#fff;padding:9px 16px;font-family:sans-serif;font-size:.9rem"><a href="../index.html" style="color:#9DB8FF;text-decoration:none;font-weight:700">← All Tools</a> <span style="opacity:.75">· DK Hunter Daily Life Toolkit</span></div><div class="wrap">
 <header><div class="eyebrow">Developer Tools</div><h1>#️⃣ Hash Generator (SHA)</h1><p>SHA-1 / SHA-256 / SHA-512 hashes of any text — computed on your device.</p></header>
 <div class="card"><label>Text</label><textarea id="tx" rows="4" placeholder="Type text to hash…"></textarea>
 <p style="margin-top:12px"><button class="btn" onclick="go()">Generate hashes</button></p>
 <label>SHA-1</label><textarea id="h1" rows="2" readonly></textarea>
 <label>SHA-256</label><textarea id="h2" rows="2" readonly></textarea>
 <label>SHA-512</label><textarea id="h5" rows="3" readonly></textarea></div>
-<footer>Built by <a href="https://github.com/iammanojbhatta">Manoj Bhatta</a> · Free tool — runs 100% in your browser, nothing is uploaded.</footer>
+<footer>Built by <a href="https://github.com/Dk-Hunterx">DK Hunter</a> · Free tool — runs 100% in your browser, nothing is uploaded.</footer>
 </div><script>const $=id=>document.getElementById(id);
 async function hx(algo,txt){const b=await crypto.subtle.digest(algo,new TextEncoder().encode(txt));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
 async function go(){const t=$('tx').value;$('h1').value=await hx('SHA-1',t);$('h2').value=await hx('SHA-256',t);$('h5').value=await hx('SHA-512',t)}</script></body></html>
