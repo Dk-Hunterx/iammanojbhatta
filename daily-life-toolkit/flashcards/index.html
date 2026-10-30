@@ -14,7 +14,7 @@ footer{text-align:center;color:var(--mut);font-size:.85rem;margin-top:8px}footer
 .stat{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)}.stat b{color:var(--pri)}
 .out{font-size:1.12rem}.big{font-size:2rem;font-weight:800;color:var(--pri);text-align:center}
 .drop{border:2px dashed var(--pri2);border-radius:14px;padding:26px;text-align:center;color:var(--mut);cursor:pointer;background:#F2F5FF}
-pre{background:#0D1117;color:#C9D1D9;padding:14px;border-radius:10px;overflow:auto;font-size:.86rem}</style></head><body><div style="background:#1D2466;color:#fff;padding:9px 16px;font-family:sans-serif;font-size:.9rem"><a href="../index.html" style="color:#9DB8FF;text-decoration:none;font-weight:700">← All Tools</a> <span style="opacity:.75">· Daily Life Toolkit by Manoj Bhatta</span></div><div class="wrap">
+pre{background:#0D1117;color:#C9D1D9;padding:14px;border-radius:10px;overflow:auto;font-size:.86rem}</style></head><body><div style="background:#1D2466;color:#fff;padding:9px 16px;font-family:sans-serif;font-size:.9rem"><a href="../index.html" style="color:#9DB8FF;text-decoration:none;font-weight:700">← All Tools</a> <span style="opacity:.75">· DK Hunter Daily Life Toolkit</span></div><div class="wrap">
 <header><div class="eyebrow">Study & Teaching</div><h1>🃏 Flashcard Maker</h1><p>Make question–answer cards and flip through them to study.</p></header>
 <div class="card"><label>Cards (one per line: question | answer)</label>
 <textarea id="tx" rows="6">Capital of Nepal? | Kathmandu
@@ -24,7 +24,7 @@ Water formula? | H2O</textarea>
 <div class="card" style="text-align:center;cursor:pointer" onclick="flip()"><div id="card" style="min-height:110px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:700">Load cards to begin</div>
 <p style="color:var(--mut)">Tap the card to flip · <span id="pos"></span></p>
 <p><button class="btn ghost" onclick="event.stopPropagation();prev()">← Prev</button> <button class="btn ghost" onclick="event.stopPropagation();next()">Next →</button></p></div>
-<footer>Built by <a href="https://github.com/iammanojbhatta">Manoj Bhatta</a> · Free tool — runs 100% in your browser, nothing is uploaded.</footer>
+<footer>Built by <a href="https://github.com/Dk-Hunterx">DK Hunter</a> · Free tool — runs 100% in your browser, nothing is uploaded.</footer>
 </div><script>let C=[],i=0,front=true;const $=id=>document.getElementById(id);
 function load(){C=$('tx').value.split('\n').map(l=>l.split('|').map(s=>s.trim())).filter(p=>p.length===2);i=0;front=true;draw()}
 function draw(){if(!C.length)return $('card').textContent='No cards — check the format: question | answer';$('card').textContent=front?('Q: '+C[i][0]):('A: '+C[i][1]);$('pos').textContent='Card '+(i+1)+' of '+C.length}
